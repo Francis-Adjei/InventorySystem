@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ------------------------------------------------------------------  Navigation Bar Starts  ---------------------------------------------------------------------------- */
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+    /* position: fixed; */
+    top: 0px;
+    background-color: #f5f5f5;
+    width: 100%;
+    z-index: 999;
+}
+.nav-bar span{
+    font-size: 40px;
+    color: blueviolet;
+}
+
+
+.nav-items > a{
+    text-decoration: none;
+    font-weight: 600; 
+    color: black;
+    font-size: 16px;  
+    margin-left: 20px;
+    padding: 8px;
+    transition-duration: 0.4s;
+
+}
+
+.nav-items a:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 8px;
+}
+
+.nav-items .join-now{
+    color: whitesmoke;
+    background-color: blueviolet;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+
+.nav-items .join-now:hover{
+    border: 2px solid blueviolet;
+    background-color: whitesmoke;
+    color: blueviolet;
+}
+.nav-items .login-now{
+    border-radius: 8px;
+    border: 2px solid blueviolet;
+    padding: 8px;
+    font-size: 14px;
+    transition-duration: 0.4s;
+}
+
+.nav-items .login-now:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 8px;
+}
+
+/* ------------------------------------------------------------------  Navigation Bar Ends  ---------------------------------------------------------------------------- */
+
+/* ---------Input Begins------ */
+#title {
+    border-right: solid 3px teal;
+    white-space: pre;
+    overflow: hidden;     
+    letter-spacing: 0.20rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    
+  }
+
+  #title {
+    animation: animated-text 2s steps(11,end) 0.5s 1 normal both,
+        animated-cursor 750ms steps(11,end) infinite;
+  }
+
+  @keyframes animated-text{
+    from{width: 0%;}
+    to{width: 210px;}
+  }
+
+
+.form{
+    margin-bottom: 40px;
+    width: 50%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.form input{
+    width: 100%;
+    height: 100%;
+    color:#595f6e ;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.form label{
+    position: absolute;
+   padding: 10px;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+.form label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid blueviolet;
+    transform: translate(-100%); 
+    transition: transform 0.3s ease;
+}
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name, 
+.form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: blueviolet;
+}
+
+.form input:focus  + .label-name::after,
+.form input:valid + .label-name::after{
+   transform: translateX(0%);
+}
+
+.submit{
+  margin-top: 15px;
+  width: 50px;
+  height: 20px;
+}
+
+.submit input{
+    float: right;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    width: 200%;
+    height: 50px;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+}
+.submit input[type = "submit"]:hover{
+  color: white;
+  background-color: blueviolet;
+}
+
+/* -------Input Ends------ */
+
+/* ------Table Begins------ */
+
+table {
+    table-layout: fixed;
+    width: 70%;
+    border-collapse: collapse;
+    align-content: center;
+}
+
+thead th:nth-child(1) {
+    width: 20%;
+}
+
+thead th:nth-child(2) {
+    width: 18%;
+}
+
+thead th:nth-child(3) {
+    width: 18%;
+}
+
+thead th:nth-child(4) {
+    width: 19%;
+}
+
+thead th:nth-child(5) {
+    width: 15%;
+}
+
+thead th:nth-child(6) {
+    width: 5%;
+}
+
+thead th:nth-child(7) {
+    width: 5%;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+thead{
+    background-color: rgb(118, 84, 150);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+/* -----Table Ends----- */
