@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/addItem.css">
+    <link rel="stylesheet" href="style/index.css">
+
 </head>
 <body>
 
@@ -15,16 +17,14 @@
         <div class="nav-items">
           <a href="index.html">Home</a>  
           <a href="#">About</a>  
-          <a href="#">Contact</a> 
-          <a href="#" class="join-now">JOIN NOW</a>
-          <a href="#" class="login-now">LOG IN</a> 
+          <a href="#">Contact</a>  
         </div>
     </nav>
 
     <h1 id = "title">ADD ITEMS</h1>
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="itemName" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Item Name</span>
          </label>
@@ -32,56 +32,55 @@
 
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="quantity" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Quantity</span>
          </label>
     </div>
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="description" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Description</span>
          </label>
     </div>
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="category" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Category</span>
          </label>
     </div>
 
     <div class="submit">
-        <input type="submit" value="Add Item">
-    </div><br><br><br>
+        <input id="addItem" type="submit" value="Add Item">
+    </div><br><br>
 
-    <table>
-        <thead class="thead-dark">
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Quantity</th>
-                <th>Available</th>
-                <th> </th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Otto</td>
-                <td><a href="update.html"><i class="fa fa-edit"></i></a></td>
-                <td><a href="#"><i class="fa fa-trash"></i></a></td>
-            </tr>
-          
-        </tbody>
-    </table>
+    
 
+    <div class="details">
+        <div class="recentOrders">
+            <table>
+               <thead>
+                   <tr>
+                       <td>Sr No</td>
+                       <td>Item Name</td>
+                       <td>Description</td>
+                       <td>Category</td>
+                       <td>Quantity</td>
+                       <td>Action</td>
+                   </tr>
+               </thead>
 
+               <tbody id="items">
+                   
+               </tbody>
+            </table>
+
+        </div>
+        
+    </div>
+
+<script src="script/add.js"></script>
 </body>
 </html>

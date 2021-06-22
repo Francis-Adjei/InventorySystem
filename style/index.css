@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 }
 
 body{
@@ -222,15 +222,6 @@ body{
     
 }
 
-.cardHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.cardHeader h2{
-    font-weight: 600;
-}
 
 .btn{
     position: relative;
@@ -259,8 +250,8 @@ body{
     border-bottom: none;
 }
 
-.details .recentOrders table tbody tr:hover{
-    background: rgb(118, 84, 150);
+.recentOrders table tbody tr:hover{
+    background: rgb(174, 137, 209);
     color: #fff;
 }
 
@@ -268,16 +259,16 @@ body{
     padding: 9px 5px;
 }
 
-.details .recentOrders table thead tr td:last-child,
+/* .details .recentOrders table thead tr td:last-child,
 .details .recentOrders table tbody tr td:last-child{
     text-align: right;
-}
+} */
 
 /* .details .recentOrders table thead tr td:nth-child(1),
 .details .recentOrders table tbody tr td:nth-child(1){
     text-align: center;
-    /* padding-right: 10px; 
-}   */
+    padding-right: 10px; 
+}   
 
 .details .recentOrders table thead tr td:nth-child(2),
 .details .recentOrders table tbody tr td:nth-child(2){
@@ -293,7 +284,7 @@ body{
 .details .recentOrders table thead tr td:nth-child(5),
 .details .recentOrders table tbody tr td:nth-child(5){
     text-align: center;
-} 
+}  */
 
 .status{
     position: relative;
@@ -304,19 +295,20 @@ body{
     font-weight: 300;
 }
 
-.delivered{
-    background: #8de028;
+.outOfStock{
+    /* background: #8de028; */
+    background: #f00;
 }
 
-.pending{
+.betweenTwenty{
     background: #f9ca3f;
 }
 
 .return{
-    background: #f00;
+    background: #8de028;
 }
 
-.inprogress{
+.aboveTwenty{
     background: #1795ce;
 }
 

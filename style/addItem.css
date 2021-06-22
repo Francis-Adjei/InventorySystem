@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -50,33 +49,10 @@ body{
     border-radius: 8px;
 }
 
-.nav-items .join-now{
-    color: whitesmoke;
-    background-color: blueviolet;
-    border-radius: 8px;
-    padding: 8px;
-    font-size: 15px;
-    transition-duration: 0.4s;
-}
 
-.nav-items .join-now:hover{
-    border: 2px solid blueviolet;
-    background-color: whitesmoke;
-    color: blueviolet;
-}
-.nav-items .login-now{
-    border-radius: 8px;
-    border: 2px solid blueviolet;
-    padding: 8px;
-    font-size: 14px;
-    transition-duration: 0.4s;
-}
 
-.nav-items .login-now:hover{
-    background-color: blueviolet;
-    color: whitesmoke;
-    border-radius: 8px;
-}
+
+
 
 /* ------------------------------------------------------------------  Navigation Bar Ends  ---------------------------------------------------------------------------- */
 
@@ -179,56 +155,14 @@ body{
   color: white;
   background-color: blueviolet;
 }
+.fa-trash ,.fa-edit{
+    margin: 0 2px ;
+    font-size: 25px;
+}
+
+.fa-trash:hover ,.fa-edit:hover{
+    color: #fff;
+}
 
 /* -------Input Ends------ */
 
-/* ------Table Begins------ */
-
-table {
-    table-layout: fixed;
-    width: 70%;
-    border-collapse: collapse;
-    align-content: center;
-}
-
-thead th:nth-child(1) {
-    width: 20%;
-}
-
-thead th:nth-child(2) {
-    width: 18%;
-}
-
-thead th:nth-child(3) {
-    width: 18%;
-}
-
-thead th:nth-child(4) {
-    width: 19%;
-}
-
-thead th:nth-child(5) {
-    width: 15%;
-}
-
-thead th:nth-child(6) {
-    width: 5%;
-}
-
-thead th:nth-child(7) {
-    width: 5%;
-}
-
-th,
-td {
-    padding: 20px;
-}
-
-thead{
-    background-color: rgb(118, 84, 150);
-    color: white;
-    text-shadow: 1px 1px 1px black;
-}
-
-
-/* -----Table Ends----- */

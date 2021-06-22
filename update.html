@@ -15,15 +15,13 @@
           <a href="index.html">Home</a>  
           <a href="#">About</a>  
           <a href="#">Contact</a> 
-          <a href="#" class="join-now">JOIN NOW</a>
-          <a href="#" class="login-now">LOG IN</a> 
         </div>
     </nav>
 
     <h1 id = "title">UPDATE ITEMS</h1>
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="itemName" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Item Name</span>
          </label>
@@ -31,29 +29,29 @@
 
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="quantity" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Quantity</span>
          </label>
     </div>
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="description" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Description</span>
          </label>
     </div>
 
     <div class="form">
-        <input type="text" name= "name" autocomplete="off" required/>
+        <input id="category" type="text" name= "name" autocomplete="off" required/>
          <label for="name" class="label-name">
             <span class="content-name">Category</span>
          </label>
     </div>
 
     <div class="submit">
-        <input type="submit" value="Update Item">
+        <input id="updateItem" type="submit" value="Update Item">
     </div>
-
+<script src="script/edit.js"></script>
 </body>
 </html>
