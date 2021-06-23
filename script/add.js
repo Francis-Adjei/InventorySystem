@@ -12,6 +12,32 @@ const clearFunction = () => {
     category.value = "";
 
 }
+let validationChecks = (itemName, quantity, description, category) => {
+   
+    if(itemName.value == ""){
+
+        return {message: "Please fill the item name", checked: false}
+
+    }else if(quantity.value == ""){ 
+
+        return {message: "Please fill the quantity", checked: false};
+
+    }else if(isNaN(quantity.value)){ 
+
+        return {message: "Please enter a number", checked: false}
+
+    }else if(description.value == ""){
+
+        return {message: "Please fill the description", checked: false}
+
+    }else if(category.value = ""){
+
+        return {message: "Please fill the category", checked: false};
+
+    }
+
+    return {message: "", checked: true};
+}
 
 let renderTable = () =>{
     let localStorageItems = JSON.parse(localStorage.getItem("items"));
@@ -66,32 +92,40 @@ addItemBtn.addEventListener("click", () => {
     const quantity = document.getElementById("quantity");
     const description = document.getElementById("description");
     const category = document.getElementById("category");
+    let {message, checked} = validationChecks(itemName, quantity, description, category);
+    if(checked){
+         // Create an item object
+        let item = {
+            itemName: itemName.value,
+            quantity: quantity.value,
+            description: description.value,
+            category: category.value,
+            editClicked: false
+        }
+        if(localStorage.getItem("items")){
+            const localItem = JSON.parse(localStorage.getItem("items"));
+            localItem.push(item);
 
-    // Create an item object
-    let item = {
-        itemName: itemName.value,
-        quantity: quantity.value,
-        description: description.value,
-        category: category.value,
-        editClicked: false
-    }
-    if(localStorage.getItem("items")){
-        const localItem = JSON.parse(localStorage.getItem("items"));
-        localItem.push(item);
+            localStorage.setItem("items", JSON.stringify(localItem));
+        }else{
+            let itemArray = [item];
+            localStorage.setItem("items", JSON.stringify(itemArray));
+        }
 
-        localStorage.setItem("items", JSON.stringify(localItem));
+
+        
+        renderTable();
+        clearFunction();
     }else{
-        let itemArray = [item];
-        localStorage.setItem("items", JSON.stringify(itemArray));
+        alert(message);
     }
 
 
-    
-    renderTable();
-    clearFunction();
 
 });
 
 
 renderTable();
+
+
 

@@ -288,11 +288,12 @@ body{
 
 .status{
     position: relative;
+    width: 100%;
     padding: 2px 4px;
-    background: #f00;
     border-radius: 4px;
     font-size: 14px;
     font-weight: 300;
+    height: 100%;
 }
 
 .outOfStock{
@@ -302,10 +303,6 @@ body{
 
 .betweenTwenty{
     background: #f9ca3f;
-}
-
-.return{
-    background: #8de028;
 }
 
 .aboveTwenty{
