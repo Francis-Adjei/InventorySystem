@@ -24,7 +24,7 @@ let validationChecks = (itemName, quantity, description, category) => {
 
     }else if(isNaN(quantity.value)){ 
 
-        return {message: "Please enter a number", checked: false}
+        return {message: "Please enter a valid input for quantity", checked: false}
 
     }else if(description.value == ""){
 
@@ -78,6 +78,8 @@ const editClicked = (index) =>{
     localStorageItems[index].editClicked = true;
     localStorage.setItem("items", JSON.stringify(localStorageItems));
 }
+
+// deleting an item
 const deleteItem = (itemIndex) =>{
     console.log(itemIndex)
     let localStorageItems = JSON.parse(localStorage.getItem("items"));
@@ -87,8 +89,9 @@ const deleteItem = (itemIndex) =>{
     localStorage.setItem("items", JSON.stringify(localStorageItems));
     renderTable();
 }
+
 addItemBtn.addEventListener("click", () => {
-    console.log("clicked")
+   
     // Get all input fields
     const itemName = document.getElementById("itemName");
     const quantity = document.getElementById("quantity");
