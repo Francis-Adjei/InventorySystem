@@ -13,7 +13,7 @@ const clearFunction = () => {
 
 }
 
-renderTable = () =>{
+let renderTable = () =>{
     let localStorageItems = JSON.parse(localStorage.getItem("items"));
     if(localStorageItems){
         const itemsHolder = document.getElementById("items");
@@ -60,6 +60,7 @@ const deleteItem = (itemIndex) =>{
     renderTable();
 }
 addItemBtn.addEventListener("click", () => {
+    console.log("clicked")
     // Get all input fields
     const itemName = document.getElementById("itemName");
     const quantity = document.getElementById("quantity");
@@ -73,6 +74,15 @@ addItemBtn.addEventListener("click", () => {
         description: description.value,
         category: category.value,
         editClicked: false
+    }
+    if(localStorage.getItem("items")){
+        const localItem = JSON.parse(localStorage.getItem("items"));
+        localItem.push(item);
+
+        localStorage.setItem("items", JSON.stringify(localItem));
+    }else{
+        let itemArray = [item];
+        localStorage.setItem("items", JSON.stringify(itemArray));
     }
 
 
