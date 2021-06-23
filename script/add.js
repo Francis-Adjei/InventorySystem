@@ -30,13 +30,15 @@ let validationChecks = (itemName, quantity, description, category) => {
 
         return {message: "Please fill the description", checked: false}
 
-    }else if(category.value = ""){
+    }else if(category.value == ""){
 
         return {message: "Please fill the category", checked: false};
 
+    }else{
+        return {message: "", checked: true};
     }
 
-    return {message: "", checked: true};
+   
 }
 
 let renderTable = () =>{
