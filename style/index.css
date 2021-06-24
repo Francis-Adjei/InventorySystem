@@ -259,32 +259,6 @@ body{
     padding: 9px 5px;
 }
 
-/* .details .recentOrders table thead tr td:last-child,
-.details .recentOrders table tbody tr td:last-child{
-    text-align: right;
-} */
-
-/* .details .recentOrders table thead tr td:nth-child(1),
-.details .recentOrders table tbody tr td:nth-child(1){
-    text-align: center;
-    padding-right: 10px; 
-}   
-
-.details .recentOrders table thead tr td:nth-child(2),
-.details .recentOrders table tbody tr td:nth-child(2){
-    text-align: center;
-    padding-right: 10px;
-}
-
-.details .recentOrders table thead tr td:nth-child(4),
-.details .recentOrders table tbody tr td:nth-child(4){
-    text-align: center;
-}
-
-.details .recentOrders table thead tr td:nth-child(5),
-.details .recentOrders table tbody tr td:nth-child(5){
-    text-align: center;
-}  */
 
 .status{
     position: relative;
@@ -297,16 +271,15 @@ body{
 }
 
 .outOfStock{
-    /* background: #8de028; */
-    background: #f00;
+    background: red;
 }
 
 .betweenTwenty{
-    background: #f9ca3f;
+    background: orange;
 }
 
 .aboveTwenty{
-    background: #1795ce;
+    background: green;
 }
 
 

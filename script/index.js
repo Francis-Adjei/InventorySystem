@@ -31,6 +31,5 @@ let renderTable = () =>{
     }
 }
 renderTable();
-// let statusIcon = document.querySelector('.status');
-// let quantity = document.getElementById("quantity");
+
 

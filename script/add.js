@@ -22,7 +22,7 @@ let validationChecks = (itemName, quantity, description, category) => {
 
         return {message: "Please fill the quantity", checked: false};
 
-    }else if(isNaN(quantity.value)){ 
+    }else if(isNaN(quantity.value) || quantity.value < 0){ 
 
         return {message: "Please enter a valid input for quantity", checked: false}
 
