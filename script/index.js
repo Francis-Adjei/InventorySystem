@@ -8,6 +8,13 @@ let statusFunction = (quantity) =>{
     }
 }
 
+const allItems = () => {
+    let tnp = document.getElementById('tnp');
+    tnp.innerText = JSON.parse(localStorage.items).length;
+  
+}
+allItems()
+
 let renderTable = () =>{
     let localStorageItems = JSON.parse(localStorage.getItem("items"));
     if(localStorageItems){
@@ -29,6 +36,8 @@ let renderTable = () =>{
         }
         itemsHolder.innerHTML = htmlFragment;
     }
+    allItems()
+
 }
 renderTable();
 

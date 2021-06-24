@@ -25,5 +25,6 @@ updateItem.addEventListener("click", () =>{
     itemClicked.editClicked = false
 
     localStorage.setItem("items", JSON.stringify(localStorageItems));
+    alert("An item has successfully been updated");
     window.location.href = "./addItem.html";
 });

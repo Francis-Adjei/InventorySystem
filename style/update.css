@@ -35,14 +35,16 @@ body{
 
 .nav-items > a{
     text-decoration: none;
+    display: inline-block;
     font-weight: 600; 
     color: black;
-    font-size: 16px;  
+    font-size: 25px;  
     margin-left: 20px;
     padding: 8px;
     transition-duration: 0.4s;
-
+    margin-top: 7px;
 }
+
 
 .nav-items a:hover{
     background-color: blueviolet;

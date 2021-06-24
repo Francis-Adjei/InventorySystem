@@ -34,13 +34,14 @@ body{
 
 .nav-items > a{
     text-decoration: none;
+    display: inline-block;
     font-weight: 600; 
     color: black;
-    font-size: 16px;  
+    font-size: 25px;  
     margin-left: 20px;
     padding: 8px;
     transition-duration: 0.4s;
-
+    margin-top: 7px;
 }
 
 .nav-items a:hover{
@@ -155,12 +156,17 @@ body{
   color: white;
   background-color: blueviolet;
 }
-.fa-trash ,.fa-edit{
+.fa-trash,
+.fa-edit{
     margin: 0 2px ;
     font-size: 25px;
 }
 
-.fa-trash:hover ,.fa-edit:hover{
+.fa-trash{
+    color: red;
+}
+
+.fa-edit:hover{
     color: #fff;
 }
 
@@ -189,7 +195,7 @@ body{
   .modal .modal__title {
     margin: 0;
     padding: 1rem;
-    border-bottom: 1px solid #ca9926;
+    border-bottom: 1px solid rgb(174, 137, 209);
     background: blueviolet;
     color: white;
     border-radius: 10px 10px 0 0;
@@ -210,8 +216,6 @@ body{
   .btn1 {
     font: inherit;
     padding: 0.5rem 1.5rem;
-    /* border: 1px solid #00329e;
-    background: #00329e; */
     color: white;
     border-radius: 6px;
     cursor: pointer;

@@ -1,4 +1,5 @@
 const addItemBtn = document.getElementById("addItem");
+
 const clearFunction = () => {
     // Get all input fields
     const itemName = document.getElementById("itemName");
@@ -84,7 +85,7 @@ const deleteItem = (itemIndex) =>{
     console.log(itemIndex)
     let localStorageItems = JSON.parse(localStorage.getItem("items"));
     localStorageItems = localStorageItems.filter((item, index) =>{
-        return itemIndex != index
+        return itemIndex != index;
     })
     localStorage.setItem("items", JSON.stringify(localStorageItems));
     renderTable();
@@ -112,9 +113,11 @@ addItemBtn.addEventListener("click", () => {
             localItem.push(item);
 
             localStorage.setItem("items", JSON.stringify(localItem));
+            alert("An item has successfully added");
         }else{
             let itemArray = [item];
             localStorage.setItem("items", JSON.stringify(itemArray));
+            alert("An item has successfully added");
         }
 
 
