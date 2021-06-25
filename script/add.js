@@ -122,12 +122,16 @@ const deleteItem = (itemIndex) =>{
         localStorage.setItem("items", JSON.stringify(localStorageItems));
         renderTable();
         yesBtn.removeEventListener("click", deleteHandler);
+        alert("Item has successfully deleted");
 
-        // alert("Item has successfully deleted");
+       
 
     }
     const yesBtn = document.getElementById("yesDelete");
+   
     yesBtn.addEventListener("click", deleteHandler);
+   
+
 
 
 }
