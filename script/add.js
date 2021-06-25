@@ -91,7 +91,7 @@ let renderTable = () =>{
                     <a href="update.html" onclick="editClicked(${i});"><i class="fa fa-edit"></i></a>
                     </span>
                 <span>
-                    <a onclick="toggleBackdrop();"><i class="fa fa-trash"></i></a>
+                    <a onclick="deleteItem(${i});"><i class="fa fa-trash"></i></a>
                 </span>
                 </td>
     
@@ -113,14 +113,26 @@ const editClicked = (index) =>{
 
 // deleting an item
 const deleteItem = (itemIndex) =>{
-    console.log(itemIndex)
-    let localStorageItems = JSON.parse(localStorage.getItem("items"));
-    localStorageItems = localStorageItems.filter((item, index) =>{
-        return itemIndex != index;
-    })
-    localStorage.setItem("items", JSON.stringify(localStorageItems));
-    renderTable();
+    toggleBackdrop();
+    const deleteHandler = () =>{
+        let localStorageItems = JSON.parse(localStorage.getItem("items"));
+        localStorageItems = localStorageItems.filter((item, index) =>{
+            return itemIndex != index;
+        })
+        localStorage.setItem("items", JSON.stringify(localStorageItems));
+        renderTable();
+        yesBtn.removeEventListener("click", deleteHandler);
+
+        // alert("Item has successfully deleted");
+
+    }
+    const yesBtn = document.getElementById("yesDelete");
+    yesBtn.addEventListener("click", deleteHandler);
+
+
 }
+
+
 
 addItemBtn.addEventListener("click", () => {
    
