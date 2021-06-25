@@ -1,5 +1,36 @@
 const addItemBtn = document.getElementById("addItem");
 
+let modal = document.querySelector("#delete-modal");
+let backdrop = document.querySelector("#backdrop");
+let cancelBtn = modal.querySelector(".btn1--passive");
+let delBtn = modal.querySelector(".btn1--danger");
+
+const toggleBackdrop = () => {
+    backdrop.classList.toggle("visible")
+    modal.classList.add("visible")
+}
+
+const hideBackdrop = () => {
+    modal.classList.remove("visible")
+    backdrop.classList.remove("visible")
+   
+}
+const hideBackdrop2 = () => {
+    modal.classList.remove("visible");
+    backdrop.classList.remove("visible");
+    // deleteItem(${i}); 
+}
+
+cancelBtn.addEventListener("click", hideBackdrop);
+delBtn.addEventListener("click", hideBackdrop2);
+backdrop.addEventListener("click", hideBackdrop);
+
+
+
+
+
+
+
 const clearFunction = () => {
     // Get all input fields
     const itemName = document.getElementById("itemName");
@@ -60,7 +91,7 @@ let renderTable = () =>{
                     <a href="update.html" onclick="editClicked(${i});"><i class="fa fa-edit"></i></a>
                     </span>
                 <span>
-                    <a onclick="deleteItem(${i})"><i class="fa fa-trash"></i></a>
+                    <a onclick="toggleBackdrop();"><i class="fa fa-trash"></i></a>
                 </span>
                 </td>
     

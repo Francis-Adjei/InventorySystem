@@ -196,8 +196,8 @@ body{
     margin: 0;
     padding: 1rem;
     border-bottom: 1px solid rgb(174, 137, 209);
-    background: blueviolet;
-    color: white;
+    background: #f5f5f5;
+    color: black;
     border-radius: 10px 10px 0 0;
   }
   
@@ -239,9 +239,9 @@ body{
   }
   
   .btn1--danger {
-    background: blueviolet;
+    background: rgb(174, 137, 209);
     color: white;
-    border-color: blueviolet;
+    border-color: rgb(174, 137, 209);
   }
   
   .btn1--danger:hover,
